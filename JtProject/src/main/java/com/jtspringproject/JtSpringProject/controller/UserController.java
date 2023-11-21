@@ -58,7 +58,7 @@ public class UserController{
 	}
 	@RequestMapping(value = "userloginvalidate", method = RequestMethod.POST)
 	public ModelAndView userlogin( @RequestParam("username") String username, @RequestParam("password") String pass,Model model,HttpServletResponse res) {
-		
+		System.out.println("");
 		System.out.println(pass);
 		User u = this.userService.checkLogin(username, pass);
 		System.out.println(u.getUsername());

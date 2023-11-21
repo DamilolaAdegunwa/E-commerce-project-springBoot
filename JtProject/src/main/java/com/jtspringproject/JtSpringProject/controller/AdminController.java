@@ -40,6 +40,7 @@ public class AdminController {
 	String usernameforclass = "";
 	@RequestMapping(value = {"/","/logout"})
 	public String returnIndex() {
+                System.out.println("returnIndex**********************************************************************");
 		adminlogcheck =0;
 		usernameforclass = "";
 		return "userLogin";
@@ -49,6 +50,7 @@ public class AdminController {
 	
 	@GetMapping("/index")
 	public String index(Model model) {
+            System.out.println("Index*********************************************************************************");
 		if(usernameforclass.equalsIgnoreCase(""))
 			return "userLogin";
 		else {
@@ -61,7 +63,7 @@ public class AdminController {
 	
 	@GetMapping("login")
 	public String adminlogin() {
-		
+		System.out.println("adminlogin**********************************************************************");
 		return "adminlogin";
 	}
 	@GetMapping("Dashboard")
